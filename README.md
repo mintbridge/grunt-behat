@@ -1,6 +1,6 @@
 # grunt-behat
 
-A [grunt]: https://github.com/cowboy/grunt task to run your [Behat]: http://behat.org/ BDD tests
+A [grunt][grunt] task to run your [Behat][behat] BDD tests
 
 ## Getting Started
 Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-behat`
@@ -13,6 +13,7 @@ grunt.loadNpmTasks('grunt-behat');
 
 [grunt]: https://github.com/cowboy/grunt
 [getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
+[behat]: http://behat.org/
 
 ## Documentation
 This task is a [multi task][types_of_tasks], meaning that grunt will automatically iterate over all `behat` targets if a target is not specified.
