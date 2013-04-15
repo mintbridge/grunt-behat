@@ -29,6 +29,7 @@ grunt.initConfig({
         failOnUndefined: false,
         failOnFailed: false
       },
+      cmd: './bin/behat',
       features: 'features/',
       flags: '-f pretty'
     },
@@ -41,6 +42,9 @@ grunt.initConfig({
 
 ####Features
 Set this to be the path to your features directory
+
+####Cmd
+Set path to behat binary if not in PATH
 
 ####Options
 Options can be used to set when the task should fail and the output that will be displayed when its does.
