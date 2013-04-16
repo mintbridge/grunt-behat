@@ -1,7 +1,7 @@
 {
   "name": "grunt-behat",
-  "description": "A grunt task to run behat BDD tests.",
-  "version": "0.1.0",
+  "description": "A grunt task to run behat BDD tests [cometcult fork].",
+  "version": "0.2.0",
   "homepage": "https://github.com/mintbridge/grunt-behat",
   "author": {
     "name": "Paul Dixon",
@@ -20,7 +20,7 @@
       "url": "https://github.com/mintbridge/grunt-behat/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "grunt.js",
+  "main": "Gruntfile.js",
   "bin": "bin/grunt-behat",
   "engines": {
     "node": "*"
@@ -29,10 +29,11 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "grunt": "~0.3.9"
+    "grunt": "~0.4.1"
   },
   "devDependencies": {
-    "grunt": "~0.3.9"
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1"
   },
   "keywords": [
     "grunt",
