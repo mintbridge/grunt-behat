@@ -40,10 +40,13 @@ module.exports = function(grunt) {
     if(typeof this.data.features !== 'undefined') {
       data.args.push(this.data.features);
     }
+    if (typeof this.data.cmd !== 'undefined') {
+      data.cmd = this.data.cmd;
+    }
 
     var done = this.async();
 
-    grunt.helper('behat', data, function(err, res) {
+    behatRunner(data, function(err, res) {
       if (err) {
         grunt.warn(err);
         done(false);
@@ -68,7 +71,7 @@ module.exports = function(grunt) {
   // HELPERS
   // ==========================================================================
 
-  grunt.registerHelper('behat', function(data, callback) {
+  function behatRunner(data, callback) {
 
     var spawn = require('child_process').spawn,
     behat     = spawn(data.cmd, data.args),
@@ -125,6 +128,6 @@ module.exports = function(grunt) {
       callback(stderr, stdout);
     });
 
-  });
+  };
 
 };
