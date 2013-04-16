@@ -61,7 +61,7 @@ module.exports = function(grunt) {
   }
 
   function hasFailedSteps(res){
-    var regexp = new RegExp("failed");
+    var regexp = new RegExp('fail', 'i');
     return regexp.test(res);
   }
   // ==========================================================================
@@ -117,6 +117,9 @@ module.exports = function(grunt) {
           if(options.output) {
             stderr = stdout;
           }
+        }
+        if (options.output) {
+            grunt.log.write(stdout);
         }
       }
       callback(stderr, stdout);
