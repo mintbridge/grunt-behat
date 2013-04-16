@@ -1,6 +1,6 @@
 {
   "name": "grunt-behat",
-  "description": "A grunt task to run behat BDD tests [cometcult fork].",
+  "description": "A grunt task to run behat BDD tests.",
   "version": "0.2.0",
   "homepage": "https://github.com/mintbridge/grunt-behat",
   "author": {
