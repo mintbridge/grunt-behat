@@ -121,7 +121,7 @@ module.exports = function(grunt) {
             stderr = stdout;
           }
         }
-        if (options.output) {
+        if (stderr === '' && options.output) {
             grunt.log.write(stdout);
         }
       }
