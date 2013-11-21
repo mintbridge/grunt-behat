@@ -26,19 +26,25 @@ module.exports = function(grunt) {
       grunt.verbose.writeln('Using master Behat options.');
       options = grunt.config('behat.options');
     }
-    grunt.verbose.writeflags(options, 'Options'); 
+    grunt.verbose.writeflags(options, 'Options');
 
     var data = {
       cmd: 'behat',
       args: [],
       options: options
-    }
+    };
 
     if(typeof this.data.flags !== 'undefined') {
-      data.args.push(this.data.flags);
+      if(!Array.isArray(this.data.flags)) {
+        this.data.flags = [this.data.flags];
+      }
+      data.args = data.args.concat(this.data.flags);
     }
     if(typeof this.data.features !== 'undefined') {
-      data.args.push(this.data.features);
+      if(!Array.isArray(this.data.features)) {
+        this.data.features = [this.data.features];
+      }
+      data.args = data.args.concat(this.data.features);
     }
     if (typeof this.data.cmd !== 'undefined') {
       data.cmd = this.data.cmd;
